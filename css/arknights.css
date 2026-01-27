@@ -3104,3 +3104,127 @@ html[theme-mode="dark"] #operator-showcase {
 html[theme-mode="dark"] #operator-showcase .operator-card:hover {
   border-color: #e6b445;
 }
+.bg-operator {
+  position: fixed;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(0.5px) saturate(1.2);
+  animation: float 8s ease-in-out infinite;
+}
+.bg-operator.left {
+  left: -50px;
+  bottom: 100px;
+  width: 200px;
+  animation-delay: 0s;
+}
+.bg-operator.right {
+  right: -30px;
+  top: 150px;
+  width: 180px;
+  animation-delay: -2s;
+}
+.bg-operator.bottom-right {
+  right: 50px;
+  bottom: 50px;
+  width: 150px;
+  animation-delay: -4s;
+}
+#main-container,
+#content-wrap,
+main,
+#about,
+#aside-block {
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .bg-operator {
+    display: none;
+  }
+  .bg-operator.right {
+    display: block;
+    width: 120px;
+    right: -20px;
+    top: 100px;
+  }
+  .bg-operator.bottom-right {
+    width: 100px;
+    right: 20px;
+    bottom: 30px;
+  }
+}
+.post-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+  vertical-align: middle;
+  object-fit: cover;
+  border: 2px solid var(--main-border-color);
+  animation: icon-pulse 2s ease-in-out infinite;
+}
+@-moz-keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+@-webkit-keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+@-o-keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+@-moz-keyframes icon-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@-webkit-keyframes icon-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@-o-keyframes icon-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+@keyframes icon-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
