@@ -1,0 +1,13 @@
+# Robots.txt for MyBlog
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wsnbb0345.github.io/wzy.github.io-/sitemap.xml
+Sitemap: https://wsnbb0345.github.io/wzy.github.io-/atom.xml
+
+# Disallow private paths
+Disallow: /lib/
+Disallow: /css/
+Disallow: /js/
+Disallow: /font/
