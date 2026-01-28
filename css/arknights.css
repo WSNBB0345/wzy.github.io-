@@ -3223,6 +3223,32 @@ main,
   font-size: 14px;
   color: var(--second-text-color);
 }
+.tooltip {
+  position: fixed;
+  z-index: 99999;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.tooltip .tooltip-content {
+  background: linear-gradient(135deg, #e6b445 0%, #c4912f 100%);
+  color: #1a1a1a;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(230,180,69,0.4);
+  border: 1px solid rgba(255,255,255,0.3);
+  max-width: 300px;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+.tooltip .tooltip-content::before {
+  content: '';
+  position: absolute;
+  border: 6px solid transparent;
+}
 ::selection {
   background: #ff9800;
   color: #000;
@@ -3252,6 +3278,11 @@ textarea {
   display: inline-flex;
   align-items: center;
   margin-right: 8px;
+}
+.pjax-loading,
+.pjax-notify {
+  background: #e6b445 !important;
+  color: #000 !important;
 }
 @-moz-keyframes float {
   0%, 100% {
